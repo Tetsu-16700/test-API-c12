@@ -17,12 +17,11 @@ usersRouter.get("/", async (_req, res) => {
 
 // CREAR UN POST
 
-usersRouter.post("/", (req, res) => {
+usersRouter.post("/", async (req, res) => {
   try {
     //  validar input de usuario
-    //  validar input de usuario
     const userData: UserData = req.body;
-    const newUser = createUser(userData);
+    const newUser = await createUser(userData);
     res.status(201).json(newUser);
   } catch (error) {
     res.status(500).send("Error al obtener un nuevo Post");
