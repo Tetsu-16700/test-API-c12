@@ -20,6 +20,7 @@ usersRouter.get("/", async (_req, res) => {
 usersRouter.post("/", (req, res) => {
   try {
     //  validar input de usuario
+    //  validar input de usuario
     const userData: UserData = req.body;
     const newUser = createUser(userData);
     res.status(201).json(newUser);
