@@ -4,4 +4,8 @@ export type User = {
     name: string;
     email: string;
   };
+  export type UserData = {
+    name: string;
+    email: string;
+  }
   
